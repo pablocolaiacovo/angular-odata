@@ -1,0 +1,22 @@
+<section class="airports">
+  <h2>Lista de aeropuertos</h2>
+
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Iata</th>
+        <th scope="col">Icao</th>
+        <th scope="col">Ubicacion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let airport of airports">
+        <td scope="row">{{ airport.Name }}</td>
+        <td>{{ airport.IataCode }}</td>
+        <td>{{ airport.IcaoCode }}</td>
+        <td>{{ airport.Location.City.Name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
